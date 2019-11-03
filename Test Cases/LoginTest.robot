@@ -1,9 +1,11 @@
 *** Settings ***
 Documentation    Suite description
 Library  SeleniumLibrary
-Resource  ../Resources/Keywords/LoginPageKeywords.robot
+Resource  ../Resources/Keywords/App Specific/LoginPageKeywords.robot
+Resource  ../Resources/Keywords/Generic/Generic.robot
+Test Setup  Test Setup
+Test Teardown   Test Teardown
 
 *** Test Cases ***
 TC001
-    open browser  http://newtours.demoaut.com   chrome
     LoginPageKeywords.Login
